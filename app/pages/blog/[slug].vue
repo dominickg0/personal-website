@@ -46,7 +46,7 @@
 const route = useRoute()
 
 const { data: post } = await useAsyncData(`blog-${route.params.slug}`, async () => {
-  return await queryCollection('blog').where('path', route.params.slug).first()
+  return await queryCollection('blog').where('stem', route.params.slug).first()
 })
 
 const { data: allPosts } = await useAsyncData('all-blog-posts', async () => {
