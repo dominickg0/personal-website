@@ -48,7 +48,16 @@ export default defineNuxtConfig({
   // GitHub Pages deployment
   app: {
     baseURL: '/personal-website/',
-    buildAssetsDir: '/personal-website/_nuxt/'
+    buildAssetsDir: '/personal-website/_nuxt/',
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/personal-website/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/personal-website/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/personal-website/favicon-16x16.png' },
+        { rel: 'apple-touch-icon', href: '/personal-website/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/personal-website/site.webmanifest' }
+      ]
+    }
   },
 
   // Static site generation
