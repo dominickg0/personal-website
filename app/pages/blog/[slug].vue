@@ -44,17 +44,15 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const { $content } = useNuxtApp()
 
 const { data: post } = await useAsyncData(`blog-${route.params.slug}`, async () => {
-  return await $content('blog', route.params.slug).findOne()
+  return await queryCollection('blog').where('path', route.params.slug).first()
 })
 
 const { data: allPosts } = await useAsyncData('all-blog-posts', async () => {
-  return await $content('blog')
-    .only(['title', 'slug', 'date'])
-    .sort({ date: -1 })
-    .find()
+  return await queryCollection('blog')
+    .order('date', 'DESC')
+    .all()
 })
 
 const currentIndex = computed(() => {

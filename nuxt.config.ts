@@ -63,7 +63,25 @@ export default defineNuxtConfig({
   // Static site generation
   nitro: {
     preset: 'static',
-    static: true
+    static: true,
+    prerender: {
+      routes: [
+        '/',
+        '/blog',
+        '/portfolio',
+        '/styleguide',
+        '/blog/building-modern-personal-website',
+        '/blog/nuxt-4-nuxt-ui',
+        '/blog/nuxt-content-portfolio',
+        '/blog/typesafe-api-development',
+        '/blog/welcome',
+        '/blog/building-professional-github-dev-environment',
+        '/portfolio/nuxt-3-typescript-boilerplate',
+        '/portfolio/analytics-dashboard',
+        '/portfolio/ecommerce-api'
+      ],
+      crawlLinks: true
+    }
   },
 
   // Sitemap configuration
@@ -76,16 +94,21 @@ export default defineNuxtConfig({
     siteUrl: 'https://dominickgianino.com/personal-website',
     autoLastmod: true,
     exclude: ['/styleguide'],
-    routes: async () => {
-      const { $content } = await import('#nuxt/server')
-      const [blogPosts, portfolioProjects] = await Promise.all([
-        $content('blog').only(['slug', 'date']).find(),
-        $content('portfolio').only(['slug', 'date']).find()
-      ])
-      const blogRoutes = blogPosts.map(post => `/blog/${post.slug}`)
-      const portfolioRoutes = portfolioProjects.map(project => `/portfolio/${project.slug}`)
-      return [...blogRoutes, ...portfolioRoutes]
-    }
+    routes: [
+      '/',
+      '/blog',
+      '/portfolio',
+      '/styleguide',
+      '/blog/building-modern-personal-website',
+      '/blog/nuxt-4-nuxt-ui',
+      '/blog/nuxt-content-portfolio',
+      '/blog/typesafe-api-development',
+      '/blog/welcome',
+      '/blog/building-professional-github-dev-environment',
+      '/portfolio/nuxt-3-typescript-boilerplate',
+      '/portfolio/analytics-dashboard',
+      '/portfolio/ecommerce-api'
+    ]
   },
 
   robots: {

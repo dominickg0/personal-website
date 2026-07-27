@@ -1,0 +1,161 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - link "Dominick Gianino" [ref=e6] [cursor=pointer]:
+            - /url: /personal-website/
+          - generic:
+            - navigation:
+              - list
+        - generic [ref=e11]:
+          - button "Switch to dark mode" [ref=e12]
+          - link [ref=e14] [cursor=pointer]:
+            - /url: https://github.com/dominickg0
+            - button "GitHub" [ref=e15]
+          - link [ref=e17] [cursor=pointer]:
+            - /url: https://linkedin.com/in/dominick-gianino-48a652414/
+            - button "LinkedIn" [ref=e18]
+          - button "Open menu" [ref=e20]
+    - main [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - heading "Dominick Gianino" [level=1] [ref=e28]
+            - generic [ref=e29]: Full-stack developer passionate about building scalable web applications, clean APIs, and great developer experiences.
+          - generic [ref=e31]:
+            - link "View Portfolio" [ref=e32] [cursor=pointer]:
+              - /url: /personal-website/portfolio
+            - link "Read Blog" [ref=e35] [cursor=pointer]:
+              - /url: /personal-website/blog
+            - link "GitHub" [ref=e38] [cursor=pointer]:
+              - /url: https://github.com/dominickg0
+            - link "LinkedIn" [ref=e41] [cursor=pointer]:
+              - /url: https://linkedin.com/in/dominick-gianino-48a652414/
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - heading "About Me" [level=2] [ref=e48]
+            - generic [ref=e49]: A little bit about my background and what I do.
+          - list [ref=e51]:
+            - listitem [ref=e52]:
+              - generic [ref=e55]:
+                - generic [ref=e56]: Full-Stack Development
+                - generic [ref=e57]: Building end-to-end web applications with modern frameworks like Nuxt, Vue, Node.js, and TypeScript.
+            - listitem [ref=e58]:
+              - generic [ref=e61]:
+                - generic [ref=e62]: Backend & APIs
+                - generic [ref=e63]: Designing RESTful and GraphQL APIs, database architecture, and microservices with Node.js, Fastify, and PostgreSQL.
+            - listitem [ref=e64]:
+              - generic [ref=e67]:
+                - generic [ref=e68]: Developer Experience
+                - generic [ref=e69]: Creating tools, CLI utilities, and improving workflows with TypeScript, OpenAPI, and automation.
+            - listitem [ref=e70]:
+              - generic [ref=e73]:
+                - generic [ref=e74]: Continuous Learning
+                - generic [ref=e75]: Always exploring new technologies, sharing knowledge through blog posts, and contributing to open source.
+        - generic [ref=e77]:
+          - generic [ref=e79]:
+            - heading "Tech Stack" [level=2] [ref=e80]
+            - generic [ref=e81]: Technologies I work with regularly.
+          - generic [ref=e82]:
+            - generic [ref=e83]: Nuxt 3/4
+            - generic [ref=e84]: Vue 3
+            - generic [ref=e85]: TypeScript
+            - generic [ref=e86]: Tailwind CSS
+            - generic [ref=e87]: Pinia
+            - generic [ref=e88]: VueUse
+          - generic [ref=e89]:
+            - generic [ref=e90]: Node.js
+            - generic [ref=e91]: Fastify
+            - generic [ref=e92]: PostgreSQL
+            - generic [ref=e93]: Prisma
+            - generic [ref=e94]: Redis
+            - generic [ref=e95]: Socket.io
+            - generic [ref=e96]: GraphQL
+          - generic [ref=e97]:
+            - generic [ref=e98]: Git
+            - generic [ref=e99]: Docker
+            - generic [ref=e100]: GitHub Actions
+            - generic [ref=e101]: Vitest
+            - generic [ref=e102]: Playwright
+            - generic [ref=e103]: ESLint
+            - generic [ref=e104]: Prettier
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - heading "Featured Projects" [level=2] [ref=e111]
+            - generic [ref=e112]: Check out some of my recent work
+          - link "View All Projects" [ref=e115] [cursor=pointer]:
+            - /url: /personal-website/portfolio
+        - generic [ref=e120]:
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - generic [ref=e127]: Nuxt 3
+              - generic [ref=e128]: Vue 3
+              - generic [ref=e129]: TypeScript
+              - generic [ref=e130]: PostgreSQL
+              - generic [ref=e131]: +3 more
+            - generic [ref=e132]:
+              - link [ref=e133] [cursor=pointer]:
+                - /url: https://github.com/dominickg0/ecommerce-platform
+              - link [ref=e135] [cursor=pointer]:
+                - /url: https://ecommerce-demo.dominickgianino.dev
+          - generic [ref=e141]:
+            - generic [ref=e142]:
+              - generic [ref=e143]: Node.js
+              - generic [ref=e144]: Fastify
+              - generic [ref=e145]: TypeScript
+              - generic [ref=e146]: PostgreSQL
+              - generic [ref=e147]: +3 more
+            - link [ref=e149] [cursor=pointer]:
+              - /url: https://github.com/dominickg0/task-management-api
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - generic [ref=e157]: Nuxt 3
+              - generic [ref=e158]: Vue 3
+              - generic [ref=e159]: TypeScript
+              - generic [ref=e160]: Socket.io
+              - generic [ref=e161]: +3 more
+            - generic [ref=e162]:
+              - link [ref=e163] [cursor=pointer]:
+                - /url: https://github.com/dominickg0/realtime-chat
+              - link [ref=e165] [cursor=pointer]:
+                - /url: https://chat-demo.dominickgianino.dev
+        - generic [ref=e171]:
+          - generic [ref=e172]:
+            - heading "Latest Blog Posts" [level=2] [ref=e173]
+            - generic [ref=e174]: Thoughts on web development, TypeScript, and building better software
+          - link "Read All Posts" [ref=e177] [cursor=pointer]:
+            - /url: /personal-website/blog
+        - generic [ref=e182]:
+          - generic [ref=e186]:
+            - generic [ref=e187]: December 14, 2024
+            - generic [ref=e188]: •
+            - generic [ref=e189]: 8 min read
+          - generic [ref=e193]:
+            - generic [ref=e194]: November 19, 2024
+            - generic [ref=e195]: •
+            - generic [ref=e196]: 12 min read
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - heading "Let's Connect" [level=2] [ref=e201]
+            - generic [ref=e202]: I'm always open to discussing new projects, collaboration opportunities, or just chatting about tech.
+          - generic [ref=e204]:
+            - link "GitHub" [ref=e205] [cursor=pointer]:
+              - /url: https://github.com/dominickg0
+            - link "LinkedIn" [ref=e208] [cursor=pointer]:
+              - /url: https://linkedin.com/in/dominick-gianino-48a652414/
+            - link "Email" [ref=e211] [cursor=pointer]:
+              - /url: mailto:dominickgianino21@gmail.com
+    - separator [ref=e214]
+    - contentinfo [ref=e219]:
+      - generic [ref=e220]:
+        - generic [ref=e222]:
+          - link [ref=e223] [cursor=pointer]:
+            - /url: https://github.com/dominickg0
+            - button "GitHub" [ref=e224]
+          - link [ref=e226] [cursor=pointer]:
+            - /url: https://linkedin.com/in/dominick-gianino-48a652414/
+            - button "LinkedIn" [ref=e227]
+        - paragraph [ref=e230]: © 2026 Dominick Gianino — Built with Nuxt & Nuxt UI
+  - region "Notifications (F8)":
+    - list

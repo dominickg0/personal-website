@@ -63,11 +63,9 @@
 
 <script setup lang="ts">
 const { data: posts } = await useAsyncData('blog-posts', async () => {
-  const { $content } = useNuxtApp()
-  return await $content('blog')
-    .only(['title', 'description', 'date', 'tags', 'image', 'readingTime', 'slug'])
-    .sort({ date: -1 })
-    .find()
+  return await queryCollection('blog')
+    .order('date', 'DESC')
+    .all()
 })
 
 const page = ref(1)

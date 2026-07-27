@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0D1117"/>
+  <rect x="50" y="50" width="1100" height="530" rx="12" stroke="#30363D" stroke-width="2"/>
+  <text x="600" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#E6EDF3">Building a Professional</text>
+  <text x="600" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#58A6FF">GitHub Dev Environment</text>
+  <text x="600" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="#8B949E">for Modern Agentic AI Development</text>
+  <rect x="500" y="340" width="200" height="4" rx="2" fill="#238636"/>
+  <g transform="translate(200, 400)">
+    <circle cx="50" cy="50" r="40" fill="#161B22" stroke="#30363D" stroke-width="2"/>
+    <text x="50" y="55" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="#58A6FF">🔐</text>
+    <text x="50" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#8B949E">SSH + GPG</text>
+  </g>
+  <g transform="translate(500, 400)">
+    <circle cx="50" cy="50" r="40" fill="#161B22" stroke="#30363D" stroke-width="2"/>
+    <text x="50" y="55" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="#A371F7">🤖</text>
+    <text x="50" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#8B949E">Copilot CLI</text>
+  </g>
+  <g transform="translate(800, 400)">
+    <circle cx="50" cy="50" r="40" fill="#161B22" stroke="#30363D" stroke-width="2"/>
+    <text x="50" y="55" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="#F97583">🔑</text>
+    <text x="50" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#8B949E">OpenRouter</text>
+  </g>
+  <text x="600" y="560" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#484F58">dominickgianino.com</text>
+</svg>
