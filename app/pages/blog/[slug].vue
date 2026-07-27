@@ -16,13 +16,18 @@
             variant="outline"
             size="sm"
             class="ml-auto"
-          >{{ tag }}</UBadge>
+          >
+            {{ tag }}
+          </UBadge>
         </div>
       </template>
     </UPageHero>
 
     <UPageSection class="max-w-3xl">
-      <UProse :value="post.body" class="prose prose-slate dark:prose-invert max-w-none" />
+      <UProse
+        :value="post.body"
+        class="prose prose-slate dark:prose-invert max-w-none"
+      />
     </UPageSection>
 
     <UContentSurround
@@ -32,12 +37,28 @@
     />
   </div>
 
-  <div v-else class="text-center py-12">
-    <UIcon name="i-lucide-alert-circle" class="text-6xl text-muted" />
-    <h2 class="mt-4 text-xl font-semibold">Post not found</h2>
-    <p class="mt-2 text-muted">The blog post you're looking for doesn't exist.</p>
-    <NuxtLink to="/blog" class="mt-4 inline-block">
-      <UButton label="Back to Blog" trailing-icon="i-lucide-arrow-left" />
+  <div
+    v-else
+    class="text-center py-12"
+  >
+    <UIcon
+      name="i-lucide-alert-circle"
+      class="text-6xl text-muted"
+    />
+    <h2 class="mt-4 text-xl font-semibold">
+      Post not found
+    </h2>
+    <p class="mt-2 text-muted">
+      The blog post you're looking for doesn't exist.
+    </p>
+    <NuxtLink
+      to="/blog"
+      class="mt-4 inline-block"
+    >
+      <UButton
+        label="Back to Blog"
+        trailing-icon="i-lucide-arrow-left"
+      />
     </NuxtLink>
   </div>
 </template>
@@ -47,13 +68,13 @@ const route = useRoute()
 
 const { data: post } = await useAsyncData(`blog-${route.params.slug}`, async () => {
   return await queryCollection('blog').where('stem', route.params.slug).first()
-})
+}, { server: true })
 
 const { data: allPosts } = await useAsyncData('all-blog-posts', async () => {
   return await queryCollection('blog')
     .order('date', 'DESC')
     .all()
-})
+}, { server: true })
 
 const currentIndex = computed(() => {
   if (!allPosts.value) return -1

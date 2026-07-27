@@ -30,13 +30,34 @@
     >
       <template #default>
         <div class="flex flex-wrap gap-2">
-          <UBadge v-for="tech in frontend" :key="tech" color="primary" variant="subtle">{{ tech }}</UBadge>
+          <UBadge
+            v-for="tech in frontend"
+            :key="tech"
+            color="primary"
+            variant="subtle"
+          >
+            {{ tech }}
+          </UBadge>
         </div>
         <div class="mt-4 flex flex-wrap gap-2">
-          <UBadge v-for="tech in backend" :key="tech" color="green" variant="subtle">{{ tech }}</UBadge>
+          <UBadge
+            v-for="tech in backend"
+            :key="tech"
+            color="green"
+            variant="subtle"
+          >
+            {{ tech }}
+          </UBadge>
         </div>
         <div class="mt-4 flex flex-wrap gap-2">
-          <UBadge v-for="tech in tools" :key="tech" color="orange" variant="subtle">{{ tech }}</UBadge>
+          <UBadge
+            v-for="tech in tools"
+            :key="tech"
+            color="orange"
+            variant="subtle"
+          >
+            {{ tech }}
+          </UBadge>
         </div>
       </template>
     </UPageSection>
@@ -77,23 +98,61 @@
 
             <template #title>
               <div class="flex items-start justify-between gap-2">
-                <h3 class="font-semibold">{{ project.title }}</h3>
-                <UBadge v-if="project.featured" color="primary" variant="subtle">Featured</UBadge>
+                <h3 class="font-semibold">
+                  {{ project.title }}
+                </h3>
+                <UBadge
+                  v-if="project.featured"
+                  color="primary"
+                  variant="subtle"
+                >
+                  Featured
+                </UBadge>
               </div>
             </template>
 
             <template #description>
-              <p class="line-clamp-2">{{ project.description }}</p>
+              <p class="line-clamp-2">
+                {{ project.description }}
+              </p>
             </template>
 
             <template #footer>
               <div class="flex flex-wrap gap-1 mb-3">
-                <UBadge v-for="tech in project.techStack.slice(0, 4)" :key="tech" variant="outline" size="sm">{{ tech }}</UBadge>
-                <UBadge v-if="project.techStack.length > 4" variant="outline" size="sm">+{{ project.techStack.length - 4 }} more</UBadge>
+                <UBadge
+                  v-for="tech in project.techStack.slice(0, 4)"
+                  :key="tech"
+                  variant="outline"
+                  size="sm"
+                >
+                  {{ tech }}
+                </UBadge>
+                <UBadge
+                  v-if="project.techStack.length > 4"
+                  variant="outline"
+                  size="sm"
+                >
+                  +{{ project.techStack.length - 4 }} more
+                </UBadge>
               </div>
               <div class="flex items-center gap-2">
-                <UButton size="sm" :to="project.githubUrl" target="_blank" variant="ghost" icon="i-simple-icons-github" class="w-8 h-8 p-0" />
-                <UButton v-if="project.demoUrl" size="sm" :to="project.demoUrl" target="_blank" variant="ghost" icon="i-lucide-external-link" class="w-8 h-8 p-0" />
+                <UButton
+                  size="sm"
+                  :to="project.githubUrl"
+                  target="_blank"
+                  variant="ghost"
+                  icon="i-simple-icons-github"
+                  class="w-8 h-8 p-0"
+                />
+                <UButton
+                  v-if="project.demoUrl"
+                  size="sm"
+                  :to="project.demoUrl"
+                  target="_blank"
+                  variant="ghost"
+                  icon="i-lucide-external-link"
+                  class="w-8 h-8 p-0"
+                />
               </div>
             </template>
           </UCard>
@@ -134,11 +193,15 @@
             </template>
 
             <template #title>
-              <h3 class="font-semibold">{{ post.title }}</h3>
+              <h3 class="font-semibold">
+                {{ post.title }}
+              </h3>
             </template>
 
             <template #description>
-              <p class="line-clamp-2">{{ post.description }}</p>
+              <p class="line-clamp-2">
+                {{ post.description }}
+              </p>
             </template>
 
             <template #footer>

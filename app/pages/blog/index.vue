@@ -25,11 +25,15 @@
             </template>
 
             <template #title>
-              <h3 class="font-semibold">{{ post.title }}</h3>
+              <h3 class="font-semibold">
+                {{ post.title }}
+              </h3>
             </template>
 
             <template #description>
-              <p class="line-clamp-2">{{ post.description }}</p>
+              <p class="line-clamp-2">
+                {{ post.description }}
+              </p>
             </template>
 
             <template #footer>
@@ -43,13 +47,18 @@
                   variant="outline"
                   size="sm"
                   class="ml-auto"
-                >{{ tag }}</UBadge>
+                >
+                  {{ tag }}
+                </UBadge>
               </div>
             </template>
           </UCard>
         </UCardGroup>
 
-        <div v-if="pageCount > 1" class="mt-8 flex justify-center">
+        <div
+          v-if="pageCount > 1"
+          class="mt-8 flex justify-center"
+        >
           <UPagination
             v-model="page"
             :page-count="pageCount"
@@ -66,7 +75,7 @@ const { data: posts } = await useAsyncData('blog-posts', async () => {
   return await queryCollection('blog')
     .order('date', 'DESC')
     .all()
-})
+}, { server: true })
 
 const page = ref(1)
 const perPage = 6

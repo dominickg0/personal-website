@@ -37,13 +37,23 @@
 
             <template #title>
               <div class="flex items-start justify-between gap-2">
-                <h3 class="font-semibold">{{ project.title }}</h3>
-                <UBadge v-if="project.featured" color="amber" variant="soft">Featured</UBadge>
+                <h3 class="font-semibold">
+                  {{ project.title }}
+                </h3>
+                <UBadge
+                  v-if="project.featured"
+                  color="amber"
+                  variant="soft"
+                >
+                  Featured
+                </UBadge>
               </div>
             </template>
 
             <template #description>
-              <p class="line-clamp-2">{{ project.description }}</p>
+              <p class="line-clamp-2">
+                {{ project.description }}
+              </p>
             </template>
 
             <template #footer>
@@ -54,8 +64,13 @@
                   variant="outline"
                   size="sm"
                   color="primary"
-                >{{ tech }}</UBadge>
-                <span v-if="project.techStack.length > 4" class="text-muted text-sm">
+                >
+                  {{ tech }}
+                </UBadge>
+                <span
+                  v-if="project.techStack.length > 4"
+                  class="text-muted text-sm"
+                >
                   +{{ project.techStack.length - 4 }} more
                 </span>
               </div>
@@ -63,10 +78,20 @@
           </UCard>
         </UCardGroup>
 
-        <div v-else class="text-center py-12">
-          <UIcon name="i-lucide-filter" class="text-4xl text-muted" />
-          <h3 class="mt-2 text-lg font-semibold">No projects found</h3>
-          <p class="mt-1 text-muted">Try selecting a different category.</p>
+        <div
+          v-else
+          class="text-center py-12"
+        >
+          <UIcon
+            name="i-lucide-filter"
+            class="text-4xl text-muted"
+          />
+          <h3 class="mt-2 text-lg font-semibold">
+            No projects found
+          </h3>
+          <p class="mt-1 text-muted">
+            Try selecting a different category.
+          </p>
         </div>
       </template>
     </UPageSection>

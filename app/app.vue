@@ -2,7 +2,10 @@
   <UApp>
     <UHeader>
       <template #left>
-        <NuxtLink to="/" class="flex items-center gap-2">
+        <NuxtLink
+          to="/"
+          class="flex items-center gap-2"
+        >
           <AppLogo class="w-6 h-6 shrink-0" />
           <span class="font-semibold text-lg">Dominick Gianino</span>
         </NuxtLink>
@@ -12,7 +15,11 @@
 
       <template #right>
         <UColorModeButton />
-        <NuxtLink to="https://github.com/dominickg0" target="_blank" class="hidden md:flex">
+        <NuxtLink
+          to="https://github.com/dominickg0"
+          target="_blank"
+          class="hidden md:flex"
+        >
           <UButton
             icon="i-simple-icons-github"
             aria-label="GitHub"
@@ -20,7 +27,10 @@
             variant="ghost"
           />
         </NuxtLink>
-        <NuxtLink to="https://linkedin.com/in/dominick-gianino-48a652414/" target="_blank">
+        <NuxtLink
+          to="https://linkedin.com/in/dominick-gianino-48a652414/"
+          target="_blank"
+        >
           <UButton
             icon="i-simple-icons-linkedin"
             aria-label="LinkedIn"
@@ -46,7 +56,10 @@
 
       <template #right>
         <div class="flex items-center gap-4">
-          <NuxtLink to="https://github.com/dominickg0" target="_blank">
+          <NuxtLink
+            to="https://github.com/dominickg0"
+            target="_blank"
+          >
             <UButton
               icon="i-simple-icons-github"
               aria-label="GitHub"
@@ -55,7 +68,10 @@
               size="sm"
             />
           </NuxtLink>
-          <NuxtLink to="https://linkedin.com/in/dominick-gianino-48a652414/" target="_blank">
+          <NuxtLink
+            to="https://linkedin.com/in/dominick-gianino-48a652414/"
+            target="_blank"
+          >
             <UButton
               icon="i-simple-icons-linkedin"
               aria-label="LinkedIn"

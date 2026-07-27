@@ -15,7 +15,7 @@
       :links="[
         { label: 'Blog', to: '/blog' },
         { label: 'Portfolio', to: '/portfolio' },
-        { label: 'Styleguide', to: '/styleguide' },
+        { label: 'Styleguide', to: '/styleguide' }
       ]"
     />
   </UDropdown>

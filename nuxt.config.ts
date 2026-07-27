@@ -12,24 +12,27 @@ export default defineNuxtConfig({
     enabled: true
   },
 
-  css: ['~/assets/css/main.css'],
-
-  routeRules: {
-    '/': { prerender: true },
-    '/blog/**': { prerender: true },
-    '/portfolio/**': { prerender: true },
-    '/styleguide': { prerender: true }
+  // GitHub Pages deployment
+  app: {
+    baseURL: '/personal-website/',
+    buildAssetsDir: '/personal-website/_nuxt/',
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/personal-website/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/personal-website/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/personal-website/favicon-16x16.png' },
+        { rel: 'apple-touch-icon', href: '/personal-website/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/personal-website/site.webmanifest' }
+      ]
+    }
   },
 
-  compatibilityDate: '2026-06-30',
+  css: ['~/assets/css/main.css'],
 
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
+  // Sitemap configuration
+  site: {
+    url: 'https://dominickgianino.com/personal-website',
+    name: 'Dominick Gianino - Personal Website'
   },
 
   content: {
@@ -45,20 +48,14 @@ export default defineNuxtConfig({
     }
   },
 
-  // GitHub Pages deployment
-  app: {
-    baseURL: '/personal-website/',
-    buildAssetsDir: '/personal-website/_nuxt/',
-    head: {
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/personal-website/favicon.ico' },
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/personal-website/favicon-32x32.png' },
-        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/personal-website/favicon-16x16.png' },
-        { rel: 'apple-touch-icon', href: '/personal-website/apple-touch-icon.png' },
-        { rel: 'manifest', href: '/personal-website/site.webmanifest' }
-      ]
-    }
+  routeRules: {
+    '/': { prerender: true },
+    '/blog/**': { prerender: true },
+    '/portfolio/**': { prerender: true },
+    '/styleguide': { prerender: true }
   },
+
+  compatibilityDate: '2026-06-30',
 
   // Static site generation
   nitro: {
@@ -84,10 +81,25 @@ export default defineNuxtConfig({
     }
   },
 
-  // Sitemap configuration
-  site: {
-    url: 'https://dominickgianino.com/personal-website',
-    name: 'Dominick Gianino - Personal Website'
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
+    }
+  },
+
+  robots: {
+    robotsTxt: false,
+    groups: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/styleguide']
+      }
+    ],
+    sitemap: 'https://dominickgianino.com/personal-website/sitemap.xml'
   },
 
   sitemap: {
@@ -109,17 +121,5 @@ export default defineNuxtConfig({
       '/portfolio/analytics-dashboard',
       '/portfolio/ecommerce-api'
     ]
-  },
-
-  robots: {
-    robotsTxt: false,
-    groups: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/styleguide']
-      }
-    ],
-    sitemap: 'https://dominickgianino.com/personal-website/sitemap.xml'
   }
 })

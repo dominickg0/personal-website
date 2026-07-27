@@ -12,7 +12,7 @@ export default defineContentConfig({
         tags: z.array(z.string()),
         image: z.string().optional(),
         author: z.string().optional(),
-        readingTime: z.number().optional(),
+        readingTime: z.number().optional()
       })
     }),
     portfolio: defineCollection({
@@ -25,7 +25,7 @@ export default defineContentConfig({
         tags: z.array(z.string()),
         image: z.string().optional(),
         url: z.string().optional(),
-        github: z.string().optional(),
+        github: z.string().optional()
       })
     })
   }
