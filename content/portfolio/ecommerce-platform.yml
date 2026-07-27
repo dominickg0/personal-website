@@ -1,0 +1,37 @@
+title: "E-Commerce Platform"
+description: "A full-stack e-commerce platform built with Nuxt 3, featuring real-time inventory, payment processing, and admin dashboard"
+techStack: ["Nuxt 3", "Vue 3", "TypeScript", "PostgreSQL", "Prisma", "Stripe", "Tailwind CSS"]
+githubUrl: "https://github.com/dominickg0/ecommerce-platform"
+demoUrl: "https://ecommerce-demo.dominickgianino.dev"
+image: "/images/projects/ecommerce.png"
+featured: true
+category: "web"
+date: 2024-11-15
+---
+# E-Commerce Platform
+
+A production-ready e-commerce platform with all the features you'd expect from a modern online store.
+
+## Features
+
+- **Product Catalog** - Categories, filtering, search, and infinite scroll
+- **Shopping Cart** - Persistent cart with localStorage + server sync
+- **Checkout Flow** - Multi-step with Stripe payment integration
+- **User Authentication** - JWT-based auth with refresh tokens
+- **Admin Dashboard** - Order management, inventory, analytics
+- **Real-time Updates** - WebSocket-powered stock updates
+
+## Technical Highlights
+
+- **Server-side rendering** for SEO-critical pages
+- **API routes** with Nitro for backend logic
+- **Database** with Prisma ORM and PostgreSQL
+- **Type-safe** end-to-end with TypeScript
+- **Testing** with Vitest and Playwright
+- **CI/CD** with GitHub Actions
+
+## Challenges Solved
+
+1. **Race conditions in cart** - Implemented optimistic locking
+2. **SEO for dynamic products** - Hybrid SSR/SSG approach
+3. **Payment reliability** - Idempotent Stripe webhook handling

@@ -1,0 +1,50 @@
+title: "Task Management API"
+description: "A RESTful API for task and project management with team collaboration features, built with Node.js and Fastify"
+techStack: ["Node.js", "Fastify", "TypeScript", "PostgreSQL", "Redis", "Docker", "OpenAPI/Swagger"]
+githubUrl: "https://github.com/dominickg0/task-management-api"
+demoUrl: ""
+image: "/images/projects/task-api.png"
+featured: true
+category: "backend"
+date: 2024-09-20
+---
+# Task Management API
+
+A robust backend API for task and project management with team collaboration features.
+
+## Features
+
+- **Projects & Tasks** - Hierarchical organization with tags, priorities, due dates
+- **Team Collaboration** - Workspaces, roles, permissions, comments
+- **Real-time Notifications** - WebSocket-based live updates
+- **File Attachments** - S3-compatible storage with signed URLs
+- **Advanced Filtering** - Complex queries with cursor pagination
+- **Webhooks** - Event-driven integrations
+
+## Technical Highlights
+
+- **Fastify** for high-performance HTTP handling
+- **TypeScript** with strict type safety
+- **PostgreSQL** with Prisma ORM
+- **Redis** for caching and pub/sub
+- **OpenAPI 3.1** spec with auto-generated client SDKs
+- **Docker** multi-stage builds for production
+- **Comprehensive testing** - unit, integration, contract
+
+## Architecture
+
+```
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│   Client    │────▶│  Fastify    │────▶│  PostgreSQL │
+│  (Web/App)  │     │   Server    │     │   (Prisma)  │
+└─────────────┘     └──────┬──────┘     └─────────────┘
+                           │
+                    ┌──────┴──────┐
+                    │    Redis    │
+                    │ (Cache/Pub) │
+                    └─────────────┘
+```
+
+## API Documentation
+
+Full OpenAPI spec available at `/docs` with interactive Swagger UI.

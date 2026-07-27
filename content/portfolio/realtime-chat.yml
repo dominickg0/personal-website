@@ -1,0 +1,38 @@
+title: "Real-time Chat Application"
+description: "A modern real-time chat application with channels, direct messages, file sharing, and emoji reactions"
+techStack: ["Nuxt 3", "Vue 3", "TypeScript", "Socket.io", "PostgreSQL", "Tailwind CSS", "Pinia"]
+githubUrl: "https://github.com/dominickg0/realtime-chat"
+demoUrl: "https://chat-demo.dominickgianino.dev"
+image: "/images/projects/chat-app.png"
+featured: false
+category: "web"
+date: 2024-07-10
+---
+# Real-time Chat Application
+
+A Slack-inspired real-time chat application with modern UX and comprehensive features.
+
+## Features
+
+- **Channels & DMs** - Public/private channels, direct messages, group DMs
+- **Message Threading** - Reply in threads to keep conversations organized
+- **Rich Messages** - Markdown, code blocks, mentions, emoji reactions
+- **File Sharing** - Drag & drop uploads with preview
+- **Search** - Full-text message search with filters
+- **Presence** - Online/offline status, typing indicators
+- **Notifications** - Push notifications for mentions and DMs
+
+## Technical Highlights
+
+- **Socket.io** for real-time bidirectional communication
+- **Pinia** for state management with persistence
+- **Optimistic UI** - Instant feedback, background sync
+- **Virtualized lists** - Handle thousands of messages smoothly
+- **Offline support** - Service worker for message queueing
+- **End-to-end encryption** option for private conversations
+
+## Scaling Considerations
+
+- Redis adapter for multi-server Socket.io
+- Message pagination with cursor-based loading
+- Connection pooling and heartbeat management
