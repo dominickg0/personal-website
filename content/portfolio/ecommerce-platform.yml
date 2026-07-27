@@ -3,7 +3,7 @@ description: "A full-stack e-commerce platform built with Nuxt 3, featuring real
 techStack: ["Nuxt 3", "Vue 3", "TypeScript", "PostgreSQL", "Prisma", "Stripe", "Tailwind CSS"]
 githubUrl: "https://github.com/dominickg0/ecommerce-platform"
 demoUrl: "https://ecommerce-demo.dominickgianino.dev"
-image: "/images/projects/ecommerce.png"
+image: "/images/portfolio/ecommerce.svg"
 featured: true
 category: "web"
 date: 2024-11-15

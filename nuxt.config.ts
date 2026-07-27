@@ -3,7 +3,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
 
   devtools: {
@@ -41,5 +43,51 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+
+  // GitHub Pages deployment
+  app: {
+    baseURL: '/personal-website/',
+    buildAssetsDir: '/personal-website/_nuxt/'
+  },
+
+  // Static site generation
+  nitro: {
+    preset: 'static',
+    static: true
+  },
+
+  // Sitemap configuration
+  site: {
+    url: 'https://dominickgianino.com/personal-website',
+    name: 'Dominick Gianino - Personal Website'
+  },
+
+  sitemap: {
+    siteUrl: 'https://dominickgianino.com/personal-website',
+    autoLastmod: true,
+    exclude: ['/styleguide'],
+    routes: async () => {
+      const { $content } = await import('#nuxt/server')
+      const [blogPosts, portfolioProjects] = await Promise.all([
+        $content('blog').only(['slug', 'date']).find(),
+        $content('portfolio').only(['slug', 'date']).find()
+      ])
+      const blogRoutes = blogPosts.map(post => `/blog/${post.slug}`)
+      const portfolioRoutes = portfolioProjects.map(project => `/portfolio/${project.slug}`)
+      return [...blogRoutes, ...portfolioRoutes]
+    }
+  },
+
+  robots: {
+    robotsTxt: false,
+    groups: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/styleguide']
+      }
+    ],
+    sitemap: 'https://dominickgianino.com/personal-website/sitemap.xml'
   }
 })

@@ -3,7 +3,7 @@ description: "Learn how to create a professional personal website using the late
 date: 2024-12-15
 tags: ["Nuxt", "Vue", "Tailwind CSS", "Nuxt UI", "Web Development"]
 author: "Dominick Gianino"
-image: "/images/blog/nuxt-personal-website.png"
+image: "/images/blog/nuxt-personal-website.svg"
 ---
 # Building a Modern Personal Website with Nuxt 4 and Nuxt UI
 

@@ -3,7 +3,7 @@ description: "A RESTful API for task and project management with team collaborat
 techStack: ["Node.js", "Fastify", "TypeScript", "PostgreSQL", "Redis", "Docker", "OpenAPI/Swagger"]
 githubUrl: "https://github.com/dominickg0/task-management-api"
 demoUrl: ""
-image: "/images/projects/task-api.png"
+image: "/images/portfolio/task-api.svg"
 featured: true
 category: "backend"
 date: 2024-09-20

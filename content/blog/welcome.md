@@ -3,6 +3,7 @@ title: "Welcome to My Blog"
 description: "Thoughts on software engineering, web development, and technology"
 date: 2025-01-15
 tags: ["welcome", "intro"]
+image: "/images/blog/welcome.svg"
 ---
 
 # Welcome to My Blog

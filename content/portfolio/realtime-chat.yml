@@ -3,7 +3,7 @@ description: "A modern real-time chat application with channels, direct messages
 techStack: ["Nuxt 3", "Vue 3", "TypeScript", "Socket.io", "PostgreSQL", "Tailwind CSS", "Pinia"]
 githubUrl: "https://github.com/dominickg0/realtime-chat"
 demoUrl: "https://chat-demo.dominickgianino.dev"
-image: "/images/projects/chat-app.png"
+image: "/images/portfolio/chat-app.svg"
 featured: false
 category: "web"
 date: 2024-07-10

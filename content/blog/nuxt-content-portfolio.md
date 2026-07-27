@@ -3,6 +3,7 @@ title: "Building a Personal Portfolio with Nuxt Content"
 description: "How I built this portfolio site using Nuxt Content v3 for static content management"
 date: 2025-01-25
 tags: ["portfolio", "nuxt", "content", "static-site"]
+image: "/images/blog/nuxt-content-portfolio.svg"
 ---
 
 # Building a Personal Portfolio with Nuxt Content

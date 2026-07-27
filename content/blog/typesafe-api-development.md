@@ -1,9 +1,10 @@
+---
 title: "Type-Safe API Development with TypeScript and OpenAPI"
 description: "How to achieve end-to-end type safety from your API specification to your frontend client"
 date: 2024-11-20
 tags: ["TypeScript", "OpenAPI", "API Development", "Fastify", "Code Generation"]
 author: "Dominick Gianino"
-image: "/images/blog/typesafe-api.png"
+image: "/images/blog/typesafe-api.svg"
 ---
 # Type-Safe API Development with TypeScript and OpenAPI
 

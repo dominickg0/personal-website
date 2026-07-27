@@ -3,6 +3,7 @@ title: "Getting Started with Nuxt 4 and Nuxt UI"
 description: "A comprehensive guide to building modern web applications with Nuxt 4 and Nuxt UI"
 date: 2025-01-20
 tags: ["nuxt", "vue", "typescript", "ui"]
+image: "/images/blog/nuxt4-nuxtui.svg"
 ---
 
 # Getting Started with Nuxt 4 and Nuxt UI
