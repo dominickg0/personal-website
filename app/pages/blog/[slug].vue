@@ -3,7 +3,6 @@
     <UPageHero
       :title="post.title"
       :description="post.description"
-      :icon="post.icon"
     >
       <template #meta>
         <div class="flex flex-wrap items-center gap-4 text-sm text-muted">
@@ -78,7 +77,7 @@ const { data: allPosts } = await useAsyncData('all-blog-posts', async () => {
 
 const currentIndex = computed(() => {
   if (!allPosts.value) return -1
-  return allPosts.value.findIndex(p => p.slug === route.params.slug)
+  return allPosts.value.findIndex(p => p.stem === route.params.slug)
 })
 
 const prevPost = computed(() => {

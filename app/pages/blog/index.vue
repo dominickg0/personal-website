@@ -11,8 +11,8 @@
         <UCardGroup>
           <UCard
             v-for="post in paginatedPosts"
-            :key="post.slug"
-            :to="`/blog/${post.slug}`"
+            :key="post.stem"
+            :to="`/blog/${post.stem}`"
             class="group"
             ui="{ wrapper: 'transition-transform duration-200 hover:-translate-y-1' }"
           >
