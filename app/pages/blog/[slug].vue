@@ -78,7 +78,10 @@ interface BlogPost {
 const slug = route.params.slug as string
 
 const { data: post } = await useAsyncData<BlogPost | null>(`blog-${slug}`, async () => {
-  return await queryCollection('blog').where('stem', slug).first()
+  const stems = [slug, `blog/${slug}`]
+    return await queryCollection('blog')
+      .where('stem', stems)
+      .first()
 }, { server: true })
 
 const { data: allPosts } = await useAsyncData<BlogPost[]>('all-blog-posts', async () => {
@@ -89,7 +92,7 @@ const { data: allPosts } = await useAsyncData<BlogPost[]>('all-blog-posts', asyn
 
 const currentIndex = computed(() => {
   if (!allPosts.value) return -1
-  return allPosts.value.findIndex(p => p.stem === slug)
+  return allPosts.value.findIndex(p => p.stem === slug || p.stem === `blog/${slug}`)
 })
 
 const prevPost = computed(() => {

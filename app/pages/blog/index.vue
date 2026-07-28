@@ -12,7 +12,7 @@
           <UCard
             v-for="post in paginatedPosts"
             :key="post.stem"
-            :to="`/blog/${post.stem}`"
+            :to="`/blog/${post.stem.replace('blog/', '')}`"
             class="group"
             ui="{ wrapper: 'transition-transform duration-200 hover:-translate-y-1' }"
           >
