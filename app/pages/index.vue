@@ -242,6 +242,7 @@ interface Project {
 
 interface BlogPost {
   slug: string
+  stem: string
   title: string
   description: string
   image: string
@@ -283,6 +284,16 @@ const featuredProjects: Project[] = [
 
 const latestPosts: BlogPost[] = [
   {
+    stem: 'building-professional-github-dev-environment',
+    slug: 'building-professional-github-dev-environment',
+    title: 'Building a Professional GitHub Development Environment for Modern Agentic AI',
+    description: 'A comprehensive guide to creating a production-ready GitHub development workflow with SSH, GPG, GitHub CLI, Copilot CLI, and OpenRouter for AI agent development.',
+    image: '/images/blog/github-dev-environment-hero.svg',
+    date: '2026-07-27',
+    readingTime: 25
+  },
+  {
+    stem: 'building-modern-personal-website',
     slug: 'building-modern-personal-website',
     title: 'Building a Modern Personal Website with Nuxt 4 and Nuxt UI',
     description: 'Learn how to create a professional personal website using the latest Nuxt 4, Nuxt UI, and Tailwind CSS v4.',
@@ -291,6 +302,7 @@ const latestPosts: BlogPost[] = [
     readingTime: 8
   },
   {
+    stem: 'typesafe-api-development',
     slug: 'typesafe-api-development',
     title: 'Type-Safe API Development with TypeScript and OpenAPI',
     description: 'How to achieve end-to-end type safety from your API specification to your frontend client.',
