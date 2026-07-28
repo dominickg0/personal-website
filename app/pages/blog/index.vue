@@ -71,7 +71,17 @@
 </template>
 
 <script setup lang="ts">
-const { data: posts } = await useAsyncData('blog-posts', async () => {
+interface BlogPost {
+  title: string
+  description: string
+  date: string
+  readingTime: number
+  tags: string[]
+  image?: string
+  stem: string
+}
+
+const { data: posts } = await useAsyncData<BlogPost[]>('blog-posts', async () => {
   return await queryCollection('blog')
     .order('date', 'DESC')
     .all()

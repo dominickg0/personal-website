@@ -65,11 +65,23 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: post } = await useAsyncData(`blog-${route.params.slug}`, async () => {
-  return await queryCollection('blog').where('stem', route.params.slug).first()
+interface BlogPost {
+  title: string
+  description: string
+  body: any
+  date: string
+  readingTime: number
+  tags: string[]
+  stem: string
+}
+
+const slug = route.params.slug as string
+
+const { data: post } = await useAsyncData<BlogPost | null>(`blog-${slug}`, async () => {
+  return await queryCollection('blog').where('stem', slug).first()
 }, { server: true })
 
-const { data: allPosts } = await useAsyncData('all-blog-posts', async () => {
+const { data: allPosts } = await useAsyncData<BlogPost[]>('all-blog-posts', async () => {
   return await queryCollection('blog')
     .order('date', 'DESC')
     .all()
@@ -77,7 +89,7 @@ const { data: allPosts } = await useAsyncData('all-blog-posts', async () => {
 
 const currentIndex = computed(() => {
   if (!allPosts.value) return -1
-  return allPosts.value.findIndex(p => p.stem === route.params.slug)
+  return allPosts.value.findIndex(p => p.stem === slug)
 })
 
 const prevPost = computed(() => {
